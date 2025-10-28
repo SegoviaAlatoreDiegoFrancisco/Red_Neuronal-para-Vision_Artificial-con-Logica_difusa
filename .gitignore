@@ -1,0 +1,6 @@
+#carpeta con +23k imagenes aprox 1GB. Puedes descargar el dataset desde Kaggle Cat vs Dog dataset.
+PetImages/
+conjuntos/
+etiquetado/
+#Entorno virtual de Python
+.venv/
