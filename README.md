@@ -13,18 +13,19 @@ Proyecto en Python que implementa una red neuronal convolucional (CNN) para clas
 ## 🚀 Instalación
 
 1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
+```bash
+git clone https://github.com/tu_usuario/tu_repositorio.git
+cd tu_repositorio
+```
 2. Crea y activa tu entorno virtual:
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # o .venv\Scripts\activate en Windows
+```bash
+   python -m venv .venv
+   source .venv/bin/activate  # o .venv\Scripts\activate en Windows
+```
 3.- Instala las dependencias:
-     ```bash
+```bash
     pip install -r requirements.txt
-    ```
-    
+```   
 📊 Modelado y lógica difusa
 Próximamente se incluirán scripts para:
 
