@@ -4,7 +4,7 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 import keras
 import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tf.keras.preprocessing.image import ImageDataGenerator
 
 # Obtener el directorio base del proyecto (2 niveles arriba del script actual)
 base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
