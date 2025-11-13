@@ -2,5 +2,9 @@
 PetImages/
 conjuntos/
 etiquetado/
+modeloCNN/
 #Entorno virtual de Python
 .venv/
+modelo_entrenado.h5
+modelo_entrenado-h5
+*.h5
