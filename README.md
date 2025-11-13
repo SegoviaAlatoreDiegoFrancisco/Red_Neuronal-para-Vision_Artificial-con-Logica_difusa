@@ -69,10 +69,12 @@ f(x_i) = e^(x_i) / Σ(e^(x_j))
 # Lógica Difusa (Fuzzy Logic)
 A diferencia de la lógica booleana (0 o 1), la lógica difusa permite grados de pertenencia (0 a 1):
 Función de membresía triangular:
+```
      /\
     /  \
    /    \
   /______\
+```
 Se aplica cuando la CNN es incierta (probabilidades cercanas a 0.5), la lógica difusa proporciona un mecanismo para expresar esa incertidumbre.
 
 ## Entrenamiento y Validación
@@ -106,7 +108,7 @@ datagen = ImageDataGenerator(rescale=1./255)
 ```
 
 Ahora, [flow_from_directory]: Lee imágenes directamente desde carpetas, con el proyecto que tiene una estructura esperada como:
-
+```
 conjuntos/
 ├── train/
 │   ├── perros/
@@ -117,7 +119,7 @@ conjuntos/
 └── test/
     ├── perros/
     └── gatos/
-
+```
 En [class_mode='categorical']: Codificación one-hot, consiste en una técnica para convertir varias variables categóricas en un formato númerico qeu los algoritmos de aprendizaje automático procesan adecuadamente. Consiste en crear una columna binaria para cada cátegoria, donde cada columna representa una categoria específica y se le atribuye un valor de [1] cuando este pertenece a la cateogoría, [0] en casos contraios (ej: [1,0] para perro, [0,1] para gato).
 
 # Fase 4: Arquitectura del modelo
