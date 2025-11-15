@@ -14,6 +14,7 @@ A continuacón se presentan 3 casos para la demostración del modelo en funciona
    ![Gráficos de gato](docs/graph/Figure_1_cat.png)
 
 3. Imagen procesada
+
    ![Imagen procesada de gato](docs/graph/Figure_2_cat.png)
 
 ### 🐶 Caso 2: Imagen de un perro
@@ -25,6 +26,7 @@ A continuacón se presentan 3 casos para la demostración del modelo en funciona
     ![Gráficos de perro](docs/graph/Figure_1_dog.png)
 
 3. Imagen procesada
+
    ![Imagen procesada de perro](docs/graph/Figure_2_dog.png)
 
 ⚖️ Caso 3: Imagen con gato y perro (ambigüedad)
@@ -36,8 +38,10 @@ A continuacón se presentan 3 casos para la demostración del modelo en funciona
     ![gráficos de ambiguedad](docs/graph/Figure_1_both.png)
 
 3. Imagen procesada
+
 Se debe destacar que en este caso, bien podría determinar que es un gato, dado a su porcentaje de probabilidad segun el modelo, y dado que hay un gato en la imagen no se podría decir que es un gato, pero bien se puede seguir jugnado con estos valores, finalmente, al ambos estar sobre límite inferior del 45% de probabilidad, se determina que bien podría ser cualqueira de los dos, en ese caso, es incierto. 
     ![Ambiguio procesado](docs/graph/Figure_2_both.png)
+
 También se pueden los resultados en consola gracias al programa. Al ejecutarse el modelo solo revuelve una tupla de porbabilidades (probabilidadGato, ProbabilidadPerro), en este caso, ya que las carpetas tenian ese orden respectivamente, siendo concretos, dados los dos grupos, el modelo devuelve (probabilidadGrupo0, probabilidadGrupo1).
 ```
 1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 184ms/step
