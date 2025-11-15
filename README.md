@@ -3,6 +3,53 @@ Proyecto en Python que implementa una red neuronal convolucional (CNN) para tare
 ## 📦 Dataset
 
 Este proyecto utiliza el dataset [Cats vs Dogs de Kaggle](https://www.kaggle.com/datasets/sansin457/cats-vs-dogs) para tareas de clasificación binaria. El dataset no está incluido en este repositorio por motivos de licencia. Para acceder a él, visita el enlace y acepta los términos de uso en Kaggle.
+
+##  📊 Ejemplos de uso y evidencias del modelo
+A continuacón se presentan 3 casos para la demostración del modelo en funcionamiento.
+### 🐱 Caso 1: Imagen de un gato
+1. Imagen original  
+   ![Gato original](docs/cases/cat/cat.jpeg)
+
+2. Representación gráfica de los resultados  
+   ![Gráficos de gato](docs/graph/Figure_1_cat.png)
+
+3. Imagen procesada
+   ![Imagen procesada de gato](docs/graph/Figure_2_cat.png)
+
+### 🐶 Caso 2: Imagen de un perro
+
+1. Imagen original  
+    ![Perro original](docs/cases/dog/dog.png)
+
+2. Representación gráfica de resultados  
+    ![Gráficos de perro](docs/graph/Figure_1_dog.png)
+
+3. Imagen procesada
+   ![Imagen procesada de perro](docs/graph/Figure_2_dog.png)
+
+⚖️ Caso 3: Imagen con gato y perro (ambigüedad)
+
+1. Imagen original  
+    ![Ambiguo original](docs/cases/both/both.jpg)
+
+2. Representación gráfica de los resultados  
+    ![gráficos de ambiguedad](docs/graph/Figure_1_both.png)
+
+3. Imagen procesada
+Se debe destacar que en este caso, bien podría determinar que es un gato, dado a su porcentaje de probabilidad segun el modelo, y dado que hay un gato en la imagen no se podría decir que es un gato, pero bien se puede seguir jugnado con estos valores, finalmente, al ambos estar sobre límite inferior del 45% de probabilidad, se determina que bien podría ser cualqueira de los dos, en ese caso, es incierto. 
+    ![Ambiguio procesado](docs/graph/Figure_2_both.png)
+También se pueden los resultados en consola gracias al programa. Al ejecutarse el modelo solo revuelve una tupla de porbabilidades (probabilidadGato, ProbabilidadPerro), en este caso, ya que las carpetas tenian ese orden respectivamente, siendo concretos, dados los dos grupos, el modelo devuelve (probabilidadGrupo0, probabilidadGrupo1).
+```
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 184ms/step
+Probabilidades -> Gato: 0.5401, Perro: 0.4599
+Pertenencia de Gato: Baja=0.2993, Media=0.5986, Alta=0.0000
+Pertenencia de Perro: Baja=0.7007, Media=0.5986, Alta=0.0000
+Predicción con lógica difusa: Incierto
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step
+Probabilidades: [Gato: 0.5401396751403809, Perro: 0.4598603844642639]
+La imagen es un Incierto.
+```
+
 # 🧠 Red Neuronal para Visión Artificial con Lógica Difusa
 
 Proyecto en Python que implementa una red neuronal convolucional (CNN) para clasificación binaria de imágenes (gatos vs perros), integrando lógica difusa para decisiones interpretables.
@@ -210,18 +257,18 @@ Esta fase introduce un componente adicional para refinar las predicciones de la 
 
 - fuzzy_decision(probabilities)
 Función de Membresía: Define cómo las probabilidades de la CNN se mapean a grados de pertenencia en conjuntos difusos:
-- - low_confidence: Probabilidades bajas (0-0.4)
-- - medium_confidence: Probabilidades medias (0.4-0.6)
-- - high_confidence: Probabilidades altas (0.6-1)
+  - low_confidence: Probabilidades bajas (0-0.4)
+  - medium_confidence: Probabilidades medias (0.4-0.6)
+  - high_confidence: Probabilidades altas (0.6-1)
 Reglas Difusas:
-- - Si la probabilidad de "perro" es alta (>0.6), la decisión es "perro".
-- - Si la probabilidad de "gato" es alta (>0.6), la decisión es "gato".
+  - Si la probabilidad de "perro" es alta (>0.6), la decisión es "perro".
+  - Si la probabilidad de "gato" es alta (>0.6), la decisión es "gato".
 En caso contrario (incertidumbre), la decisión es "Incierto".
 - predict_with_fuzzy_logic(image_path)
-- -Carga y preprocesa la imagen.
-- - Realiza la predicción con el modelo CNN.
-- - Aplica la lógica difusa para tomar una decisión final.
-- Ejemplo de Predicción
+  -Carga y preprocesa la imagen.
+  - Realiza la predicción con el modelo CNN.
+  - Aplica la lógica difusa para tomar una decisión final.
+  Ejemplo de Predicción
 Demuestra cómo usar la función predict_with_fuzzy_logic para predecir la clase de una imagen.
 
 ## Conclusión
